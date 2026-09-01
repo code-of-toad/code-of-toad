@@ -15,6 +15,14 @@ I care about the engineering details that make data trustworthy: explicit schema
 
 **PySpark • Apache Spark • SQL • Google Cloud Storage • BigQuery • Parquet • pytest**
 
+<p align="center">
+  <a href="https://github.com/code-of-toad/nullmarket-retail-data-engineering-platform">
+    <img src="assets/nullmarket_architecture.jpg"
+         alt="NullMarket retail data engineering platform architecture"
+         width="100%">
+  </a>
+</p>
+
 An end-to-end batch data engineering platform for a fictional Canadian retailer, built to demonstrate reliable ingestion, distributed transformation, dimensional modelling, cloud storage, warehouse loading, data quality, testing, and incremental processing.
 
 ```text
@@ -50,6 +58,8 @@ Analytical SQL
 ### [ClinicalPulse — Healthcare Business Intelligence Platform](https://github.com/code-of-toad/clinical-pulse-healthcare-bi)
 
 [![ClinicalPulse Executive Overview](https://raw.githubusercontent.com/code-of-toad/clinical-pulse-healthcare-bi/main/powerbi/screenshots/executive_overview.png)](https://github.com/code-of-toad/clinical-pulse-healthcare-bi)
+
+[![ClinicalPulse Architecture Diagram](https://raw.githubusercontent.com/code-of-toad/clinical-pulse-healthcare-bi/main/docs/architecture_diagram.png)](https://github.com/code-of-toad/clinical-pulse-healthcare-bi/blob/main/docs/architecture_diagram.png)
 
 A governed hospital BI platform built with synthetic EHR data, SQL Server, Python, and Power BI.
 
