@@ -1,15 +1,51 @@
 # Hi, I'm Danny Han
 
-**Data & Business Intelligence Analyst | Power BI, SQL, Excel & Python**  
+**Data Engineer & Business Intelligence Analyst | PySpark, SQL, GCP, BigQuery, Power BI**  
 **Microsoft Certified: Power BI Data Analyst Associate**
 
-I build data systems that turn operational questions into clear, reliable reporting. My work spans requirements gathering, SQL data modelling, data-quality controls, KPI design, DAX, dashboard development, validation, and documentation.
+I build data systems that turn operational data into reliable analytical datasets and decision-ready reporting. My work spans PySpark pipelines, SQL data modelling, dimensional design, data-quality controls, cloud warehousing, KPI development, dashboarding, validation, and documentation.
 
-I am currently completing an Honours Bachelor of Science in Computer Science and Statistics at the University of Toronto Mississauga. I am particularly interested in data and BI analyst roles where I can work closely with stakeholders, understand how an organization operates, and improve the way decisions are made.
+I am currently completing an Honours Bachelor of Science in Computer Science and Statistics at the University of Toronto Mississauga. I am particularly interested in data engineering and analytics roles where I can build trustworthy pipelines, model data carefully, and make downstream analysis easier to use and defend.
 
-I care about the parts of analytics that make the final dashboard trustworthy: precise definitions, sound data models, transparent quality checks, and documentation that someone else can actually follow.
+I care about the engineering details that make data trustworthy: explicit schemas, correct grain, sound keys and relationships, reproducible transformations, strong validation, and documentation that someone else can actually follow.
 
 ## Featured projects
+
+### [NullMarket — Retail Data Engineering Platform](https://github.com/code-of-toad/nullmarket-retail-data-engineering-platform)
+
+**PySpark • Apache Spark • SQL • Google Cloud Storage • BigQuery • Parquet • pytest**
+
+An end-to-end batch data engineering platform for a fictional Canadian retailer, built to demonstrate reliable ingestion, distributed transformation, dimensional modelling, cloud storage, warehouse loading, data quality, testing, and incremental processing.
+
+```text
+Synthetic Sources
+    ↓
+Google Cloud Storage — Raw
+    ↓
+PySpark / Managed Apache Spark
+    ├─ Explicit schemas
+    ├─ Data-quality validation
+    ├─ Rejected-record quarantine
+    ├─ Cleansing + joins
+    └─ Business transformations
+    ↓
+Google Cloud Storage — Curated Parquet
+    ↓
+BigQuery Dimensional Warehouse
+    ↓
+Analytical SQL
+```
+
+- Integrated five retail source datasets with explicitly declared grains and PySpark `StructType` schemas
+- Built reusable validation for required fields, key uniqueness, referential integrity, numeric business rules, and rejected-record handling
+- Designed conformed `dim_date`, `dim_product`, and `dim_store` dimensions with separate sales and inventory fact tables
+- Reused the same transformation logic for local Spark and Google-managed Spark execution
+- Persisted curated datasets as Parquet and validated schema, grain, row counts, measures, and round-trip correctness
+- Built partitioned and clustered BigQuery fact tables for analytical workloads
+- Added automated pytest coverage and independent warehouse reconciliation
+- Implemented deterministic incremental batches with stable surrogate-key mappings and retry-safe insert-only BigQuery `MERGE`
+
+---
 
 ### [ClinicalPulse — Healthcare Business Intelligence Platform](https://github.com/code-of-toad/clinical-pulse-healthcare-bi)
 
@@ -24,15 +60,36 @@ A governed hospital BI platform built with synthetic EHR data, SQL Server, Pytho
 - Implemented ingestion auditing, data-quality controls, lineage, asset scorecards, and security documentation
 - Delivered the project through Git, GitHub, and Azure DevOps Boards
 
+---
+
 ### [Anti-Money Laundering Risk Detection and Decision-Support Pipeline](https://github.com/code-of-toad/AML-Detection-Pipeline-Project)
+
+<p align="center">
+  <a href="https://github.com/code-of-toad/AML-Detection-Pipeline-Project">
+    <img src="assets/aml_pipeline_overview.jpg"
+         alt="AML risk-detection, fusion, explanation, and viewer pipeline"
+         width="100%">
+  </a>
+</p>
 
 An end-to-end AML analytics system that combines domain-informed risk rules with unsupervised machine-learning models to identify and explain potentially suspicious customer behaviour.
 
 - Earned a top-five placement in an AML analytics competition hosted by the University of Toronto IMI BigDataAIHub and Scotiabank, involving approximately 490 participants across 90 teams
-- Built reproducible workflows for feature preparation, behavioural clustering, rule-based risk scoring, anomaly detection, and output generation
+- Built reproducible workflows for feature preparation, behavioural clustering, rule-based risk scoring, anomaly detection, score fusion, and output generation
 - Combined rule-based indicators with model-generated anomaly scores to produce interpretable customer risk assessments
 - Created plain-language explanations that connect model outputs to AML red-flag categories for non-technical reviewers
+- Built a desktop explanation viewer for browsing, filtering, and searching customer-level risk explanations
 - Designed a modular model interface that allows additional detection algorithms to be incorporated without changing the core pipeline
+
+<p align="center">
+  <a href="https://github.com/code-of-toad/AML-Detection-Pipeline-Project">
+    <img src="assets/aml_explanations_viewer.png"
+         alt="AML customer risk explanation viewer"
+         width="82%">
+  </a>
+</p>
+
+---
 
 ### [CSSU Rewards System API](https://github.com/code-of-toad/project_ecommerce_system_backend)
 
@@ -55,8 +112,10 @@ A RESTful backend API for a points-based rewards platform, designed around secur
 
 | Area | Tools and capabilities |
 |---|---|
+| Data engineering | PySpark, Apache Spark, batch processing, Parquet, data quality, dimensional modelling, incremental processing |
+| Cloud & warehousing | Google Cloud Platform, Google Cloud Storage, BigQuery |
 | Business intelligence | Power BI, DAX, Power Query, dashboard design, KPI development |
-| Data and databases | SQL Server, T-SQL, relational modelling, dimensional modelling, data quality, ETL/ELT |
+| Data & databases | SQL Server, T-SQL, SQL, relational modelling, ETL/ELT |
 | Analysis | Excel, Python, pandas, R, statistical analysis, data visualization |
 | Development | Git, GitHub, Azure DevOps, JavaScript, C, Java, Bash |
 
