@@ -1,7 +1,7 @@
 # Hi, I'm Danny Han
 
 **Data Engineer & Business Intelligence Analyst | Python, SQL, PySpark, Power BI, Excel**  
-**Microsoft Certified: Power BI Data Analyst Associate**
+**Microsoft Certified: Power BI Data Analyst Associate (PL-300)**
 
 I build data systems that turn operational data into reliable analytical datasets and decision-ready reporting. My work spans PySpark pipelines, SQL data modelling, dimensional design, data-quality controls, cloud warehousing, KPI development, dashboarding, validation, and documentation.
 
